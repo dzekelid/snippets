@@ -15,7 +15,7 @@
             {% for api in entry.apis %}
                {% if entry.name == item.x-collection-name %}
                  {% assign api_name = entry.name %}
-                 {% assign api_slug = api_name | replace: ' ','-' | replace: '/','' | replace: '&','-' | replace: '=','-' | replace: '{','-' | replace: '}','-' | replace: '?','-' | replace: '_','-' | replace: '--','-' | downcase %}
+                 {% assign api_slug = api_name | replace: ' ','-' | replace: '/','' | replace: '.','' | replace: '&','-' | replace: '=','-' | replace: '{','-' | replace: '}','-' | replace: '?','-' | replace: '_','-' | replace: '--','-' | downcase %}
                  {% assign api_description = entry.description %}
                  {% assign api_image = entry.image %}
                  {% assign api_json_url = entry.url %}
@@ -28,7 +28,7 @@
 
          {% for path in item.paths %}
            {% assign path_name = path[0] %}
-           {% assign api_path_slug = path_name | lstrip | rstrip | remove_first: "/" | replace: '{','' | replace: '}','' | replace: ' ','-' | replace: '/','-' | replace: '&','-' | replace: ':','' | replace: '.','-' | replace: '=','-' | replace: '?','-' | replace: '_','-' | replace: '---','-' | replace: '--','-' | downcase %}
+           {% assign api_path_slug = path_name | lstrip | rstrip | remove_first: "/" | replace: '{','' | replace: '}','' | replace: ' ','-' | replace: '/','-' | replace: '&','-' | replace: ':','' | replace: '.','-' | replace: '=','-' | replace: '?','' | replace: '_','-' | replace: '---','-' | replace: '--','-' | downcase %}
            {% for method in path[1] %}
              {% assign method_details = method[1] %}
              {% assign verb = method[0] %}
