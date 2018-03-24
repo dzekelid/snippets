@@ -25,7 +25,7 @@ apis:
   tags: Snippets
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-watchers-parameters.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-delete.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
