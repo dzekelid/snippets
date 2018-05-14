@@ -26,26 +26,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-revision-patch-parameters.md
-- name: Bitbucket Get Snippets Username Encoded  Node
-  description: |-
-    Identical to `GET /snippets/encoded_id`, except that this endpoint
-    can be used to retrieve the contents of the snippet as it was at an
-    older revision, while `/snippets/encoded_id` always returns the
-    snippet's current revision.
-
-    Note that only the snippet's file contents are versioned, not its
-    meta data properties like the title.
-
-    Other than that, the two endpoints are identical in behavior.
+- name: Bitbucket Parameters Snippets Username Encoded  Node
+  description: Parameters snippets username encoded  node
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bitbucket-logo.png
   humanURL: https://bitbucket.org/
   baseURL: https://api.bitbucket.org//2.0
   tags: Snippets
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-parameters.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-parameters-postman.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
