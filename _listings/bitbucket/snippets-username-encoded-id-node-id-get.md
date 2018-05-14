@@ -1,10 +1,17 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Snippets Username Encoded  Node
+  description: |-
+    Identical to `GET /snippets/encoded_id`, except that this endpoint
+    can be used to retrieve the contents of the snippet as it was at an
+    older revision, while `/snippets/encoded_id` always returns the
+    snippet's current revision.
+
+    Note that only the snippet's file contents are versioned, not its
+    meta data properties like the title.
+
+    Other than that, the two endpoints are identical in behavior.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
