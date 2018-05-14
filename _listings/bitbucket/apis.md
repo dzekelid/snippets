@@ -26,26 +26,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-revision-patch-parameters.md
-- name: Bitbucket Get Snippets Username Encoded  Node  Files Path
-  description: |-
-    Retrieves the raw contents of a specific file in the snippet. The
-    `Content-Disposition` header will be "attachment" to avoid issues with
-    malevolent executable files.
-
-    The file's mime type is derived from its filename and returned in the
-    `Content-Type` header.
-
-    Note that for text files, no character encoding is included as part of
-    the content type.
+- name: Bitbucket Parameters Snippets Username Encoded  Node  Files Path
+  description: Parameters snippets username encoded  node  files path
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bitbucket-logo.png
   humanURL: https://bitbucket.org/
   baseURL: https://api.bitbucket.org//2.0
   tags: Snippets
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-files-path-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-files-path-parameters.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-files-path-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-files-path-parameters-postman.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
