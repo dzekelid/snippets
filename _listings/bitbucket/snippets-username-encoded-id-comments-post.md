@@ -1,10 +1,13 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Add Snippets Username Encoded  Comments
+  description: |-
+    Creates a new comment.
+
+    The only required field in the body is `content.raw`.
+
+    To create a threaded reply to an existing comment, include `parent.id`.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
