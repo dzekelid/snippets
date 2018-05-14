@@ -1,10 +1,27 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Snippets Username Encoded  Revision Diff
+  description: |-
+    Returns the diff of the specified commit against its first parent.
+
+    Note that this resource is different in functionality from the `patch`
+    resource.
+
+    The differences between a diff and a patch are:
+
+    * patches have a commit header with the username, message, etc
+    * diffs support the optional `path=foo/bar.py` query param to filter the
+      diff to just that one file diff (not supported for patches)
+    * for a merge, the diff will show the diff between the merge commit and
+      its first parent (identical to how PRs work), while patch returns a
+      response containing separate patches for each commit on the second
+      parent's ancestry, up to the oldest common ancestor (identical to
+      its reachability).
+
+    Note that the character encoding of the contents of the diff is
+    unspecified as Git and Mercurial do not track this, making it hard for
+    Bitbucket to reliably determine this.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
