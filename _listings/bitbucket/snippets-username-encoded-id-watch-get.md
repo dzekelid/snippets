@@ -1,10 +1,14 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Snippets Username Encoded  Watch
+  description: |-
+    Used to check if the current user is watching a specific snippet.
+
+    Returns 204 (No Content) if the user is watching the snippet and 404 if
+    not.
+
+    Hitting this endpoint anonymously always returns a 404.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
