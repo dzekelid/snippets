@@ -1,10 +1,17 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Snippets Username Encoded  Node  Files Path
+  description: |-
+    Retrieves the raw contents of a specific file in the snippet. The
+    `Content-Disposition` header will be "attachment" to avoid issues with
+    malevolent executable files.
+
+    The file's mime type is derived from its filename and returned in the
+    `Content-Type` header.
+
+    Note that for text files, no character encoding is included as part of
+    the content type.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
