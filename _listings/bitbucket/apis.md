@@ -26,17 +26,25 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-revision-patch-parameters.md
-- name: Bitbucket Parameters Snippets Username Encoded  Watchers
-  description: Parameters snippets username encoded  watchers
+- name: Bitbucket Delete Snippets Username Encoded  Node
+  description: |-
+    Deletes the snippet.
+
+    Note that this only works for versioned URLs that point to the latest
+    commit of the snippet. Pointing to an older commit results in a 405
+    status code.
+
+    To delete a snippet, regardless of whether or not concurrent changes
+    are being made to it, use `DELETE /snippets/{encoded_id}` instead.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bitbucket-logo.png
   humanURL: https://bitbucket.org/
   baseURL: https://api.bitbucket.org//2.0
   tags: Snippets
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-watchers-parameters.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-delete.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-watchers-parameters-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-delete-postman.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
