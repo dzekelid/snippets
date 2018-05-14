@@ -26,17 +26,31 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-revision-patch-parameters.md
-- name: Bitbucket Parameters Snippets Username Encoded  Node
-  description: Parameters snippets username encoded  node
+- name: Bitbucket Update Snippets Username Encoded  Node
+  description: |-
+    Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
+    takes an explicit commit revision. Only the snippet's "HEAD"/"tip"
+    (most recent) version can be updated and requests on all other,
+    older revisions fail by returning a 405 status.
+
+    Usage of this endpoint over the unrestricted `/snippets/encoded_id`
+    could be desired if the caller wants to be sure no concurrent
+    modifications have taken place between the moment of the UPDATE
+    request and the original GET.
+
+    This can be considered a so-called "Compare And Swap", or CAS
+    operation.
+
+    Other than that, the two endpoints are identical in behavior.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bitbucket-logo.png
   humanURL: https://bitbucket.org/
   baseURL: https://api.bitbucket.org//2.0
   tags: Snippets
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-parameters.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-put.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-parameters-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/snippets-username-encoded-id-node-id-put-postman.md
 x-common:
 - type: x-developer
   url: https://developer.atlassian.com/cloud/bitbucket/
