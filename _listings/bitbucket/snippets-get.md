@@ -1,10 +1,31 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Get Snippets
+  description: |-
+    Returns all snippets. Like pull requests, repositories and teams, the
+    full set of snippets is defined by what the current user has access to.
+
+    This includes all snippets owned by the current user, but also all snippets
+    owned by any of the teams the user is a member of, or snippets by other
+    users that the current user is either watching or has collaborated on (for
+    instance by commenting on it).
+
+    To limit the set of returned snippets, apply the
+    `?role=[owner|contributor|member]` query parameter where the roles are
+    defined as follows:
+
+    * `owner`: all snippets owned by the current user
+    * `contributor`: all snippets owned by, or watched by the current user
+    * `member`: owned by the user, their teams, or watched by the current user
+
+    When no role is specified, all public snippets are returned, as well as all
+    privately owned snippets watched or commented on.
+
+    The returned response is a normal paginated JSON list. This endpoint
+    only supports `application/json` responses and no
+    `multipart/form-data` or `multipart/related`. As a result, it is not
+    possible to include the file contents.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
