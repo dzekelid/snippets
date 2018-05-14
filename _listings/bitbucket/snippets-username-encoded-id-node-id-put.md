@@ -1,10 +1,22 @@
 ---
 swagger: "2.0"
 info:
-  title: Bitbucket
-  description: Code against the Bitbucket API to automate simple tasks, embed Bitbucket
-    data into your own site, build mobile or desktop apps, or even add custom UI add-ons
-    into Bitbucket itself using the Connect framework.
+  title: Bitbucket Update Snippets Username Encoded  Node
+  description: |-
+    Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
+    takes an explicit commit revision. Only the snippet's "HEAD"/"tip"
+    (most recent) version can be updated and requests on all other,
+    older revisions fail by returning a 405 status.
+
+    Usage of this endpoint over the unrestricted `/snippets/encoded_id`
+    could be desired if the caller wants to be sure no concurrent
+    modifications have taken place between the moment of the UPDATE
+    request and the original GET.
+
+    This can be considered a so-called "Compare And Swap", or CAS
+    operation.
+
+    Other than that, the two endpoints are identical in behavior.
   termsOfService: https://www.atlassian.com/legal/customer-agreement
   contact:
     name: Bitbucket Support
