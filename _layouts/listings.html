@@ -2,37 +2,67 @@
 layout: default
 ---
 
-{% if page.info.title %}
+<div class="shortMasthead  shortMasthead--extra-top-padding ">
+  {% if page.info.title or page.name %}
+       <!--nothing-->
+  {% else %}
+       {% include api-listing-feature.html %}
+  {% endif %}
+</div>
 
-  {% assign openapi = page | replace: ' ','-' | downcase %}
-  {% assign slug = page.info.title | replace: ' ','-' | downcase %}
+<section class="taggedLinkCards">
 
-  {% assign slug = page.info.title %}
-  {% for item in site.listings %}
-    {% if item.name %}
-      {% if page.x-collection-name == item.name %}
-        {% assign apis_json = item %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+   {% if page.info.title or page.name %}
+        <!--nothing-->
+   {% else %}
+        {% include api-tag-filter.html %}
+   {% endif %}
 
-  {% include apis-json.html %}
-  {% include x-common.html %}
-  {% include api-paths.html %}
-  {% include api-url.html %}
-  {% include api-stream-url.html %}
+   {% if page.info.title %}
 
-  {% assign stream_rank = page.x-streamrank %}
+    {% assign api_host = page.host %}
+    {% assign api_base = page.basePath %}
+    {% assign api_scheme = page.schemes[0] %}
 
-  {% include api-details.html %}
+     {% assign openapi = page | replace: ' ','-' | downcase %}
+     {% assign slug = page.info.title | replace: ' ','-' | downcase %}
 
-{% else %}
+     {% assign slug = page.info.title %}
+     {% for item in site.listings %}
+       {% if item.name %}
+         {% if page.x-collection-name == item.name %}
+           {% assign apis_json = item %}
+         {% endif %}
+       {% endif %}
+     {% endfor %}
 
-  {% assign apis_json = page %}
+     {% include apis-json.html %}
+     {% include x-common.html %}
+     {% include api-paths.html %}
+     {% include api-url.html %}
+     {% include api-stream-url.html %}
 
-  {% include apis-json.html %}
-  {% include x-common.html %}
+     {% assign stream_rank = page.x-streamrank %}
 
-  {% include org-details.html %}
+     {% include api-details.html %}
 
-{% endif %}
+   {% else %}
+   
+     {% assign apis_json = page %}
+
+     {% include apis-json.html %}
+     {% include x-common.html %}
+
+     {% include org-details.html %}
+
+   {% endif %}
+
+</section>
+
+<div class="submitApi__overflowContainer" data-submit-api="">
+   <div class="submitApi submitApi--left-hand-image">
+
+     {% include api-listing-submit.html %}
+
+   </div>
+</div>
