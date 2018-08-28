@@ -1,0 +1,71 @@
+{
+	"name": "Streadata.io API Gallery - Snippets",
+	"description": "This is a repository of snippets APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/snippets.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-28",
+	"url": "http://snippets.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "glot.io",
+			"x-api-slug": "glot-io",
+			"description": "glot.io lets you run and share snippets. Snippets can be saved as either public or secret. Public snippets will show up in /snippets and will be found by search engines. Secret snippets can only be accessed by those who know the url. Code is executed inside a temporary container without a network connection. Execution time is limited to 15 seconds and the output can not exceed 100KiB.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/glot-io-logo.png",
+			"humanURL": "https://glot.io/",
+			"baseURL": "https:///",
+			"tags": "Snippets",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/glot-io/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Bitbucket",
+			"x-api-slug": "bitbucket",
+			"description": "Collaborate on code with inline comments and pull requests. Manage and share your Git repositories to build and ship software, as a team.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/19810-bitbucket.jpg",
+			"humanURL": "http://bitbucket.org",
+			"baseURL": "https://api.bitbucket.org//2.0",
+			"tags": "Snippets",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "GitLab",
+			"x-api-slug": "gitlab",
+			"description": "GitLab is a web-based Git-repository manager with wiki, issue-tracking and CI/CD pipelines features, using an open-source license, developed by GitLab Inc.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/githlab-logo.png",
+			"humanURL": "http://gitlab.com",
+			"baseURL": "https://localhost:3000//api",
+			"tags": "Snippets",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/gitlab/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "Snippets",
+	"include": [
+		{
+			"name": "glot.io",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/glot-io/apis.yaml"
+		},
+		{
+			"name": "Bitbucket",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/bitbucket/apis.yaml"
+		},
+		{
+			"name": "GitLab",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/snippets/master/_listings/gitlab/apis.yaml"
+		}
+	]
+}
